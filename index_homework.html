@@ -59,7 +59,7 @@
           Save this page on your computer and open it with VSCode to get the
           questions!
         </h2>
-        <button onclick="changeSubtitle2(event)">Chnage Subtitle</button>
+        <button>Change Subtitle</button>
       </div>
     </footer>
 
@@ -206,14 +206,23 @@
       };
       colorInput();
 
-      const changeSubtitle2 = (event) => {
-        const subtitle = document.querySelector("header h2");
-        // const button = document.querySelector("button");
-        const input = document.getElementById("inputColor");
-        console.log(input.value);
-        subtitle.style.color = input.value;
-      };
+      // const changeSubtitle2 = (event) => {
+      //   const subtitle = document.querySelector("header h2");
+      //   // const button = document.querySelector("button");
+      //   const input = document.getElementById("inputColor");
+      //   console.log(input.value);
+      //   subtitle.style.color = input.value;
+      // };
 
+      window.onload = function () {
+        const button = document.querySelector("button");
+        const subtitle = document.querySelector("header h2");
+        const input = document.getElementById("inputColor");
+        const changeSubtitle2 = (event) => {
+          subtitle.style.color = input.value;
+        };
+        button.addEventListener("click", changeSubtitle2);
+      };
       /* EXERCISE 13
        Use HTML5 tags to properly provide semantic meaning to the different portions of the page.
       */
